@@ -23,7 +23,4 @@ $grant = new VideoGrant();
 $grant->setRoom($room);
 $token->addGrant($grant);
 
-echo json_encode(array(
-    'identity' => $identity,
-    'token' => $token->toJWT(),
-));
+echo ($token->toJWT());
